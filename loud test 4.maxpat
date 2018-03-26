@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 289.0, 179.0, 1103.0, 630.0 ],
+		"rect" : [ 158.0, 79.0, 1103.0, 630.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,22 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 17.5, 322.0, 150.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 265.5, 229.0, 150.0, 47.0 ],
+					"style" : "",
+					"text" : "the auto record isn't working now but i haven't changed anything to it. "
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-185",
 					"linecount" : 2,
@@ -80,7 +96,34 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-46",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 482.97467, 11.0, 150.0, 60.0 ],
+									"style" : "",
+									"text" : "i also don;t knwo how to set it so it is on a timer and moves without me doing it manually "
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-44",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 172.5, 309.0, 156.0, 33.0 ],
+									"style" : "",
+									"text" : "this was working but now the text is not dumping out "
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-42",
 									"maxclass" : "comment",
@@ -988,7 +1031,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ 191.0, 267.0, 1298.0, 630.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1016,6 +1059,19 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 502.0, 293.176331, 154.0, 33.0 ],
+									"style" : "",
+									"text" : "the panning is not working but it's accepting the signal"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontsize" : 8.877117,
 									"id" : "obj-49",
@@ -2735,7 +2791,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 470.0, 315.0, 100.0, 35.0 ],
+					"patching_rect" : [ 470.0, 315.0, 103.0, 35.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 48.0, 297.0, 137.0, 22.0 ],
 					"saved_object_attributes" : 					{
@@ -4467,8 +4523,8 @@
 									"id" : "obj-34",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 400.0, 375.0, 149.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"filename" : "JSON-google-speech.js",
@@ -4679,32 +4735,9 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-13", 0 ],
-									"order" : 1,
-									"source" : [ "obj-34", 2 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
 									"order" : 1,
 									"source" : [ "obj-34", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 1 ],
-									"source" : [ "obj-34", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-30", 1 ],
-									"order" : 0,
-									"source" : [ "obj-34", 2 ]
 								}
 
 							}
@@ -4975,9 +5008,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 9,
+					"numinlets" : 8,
 					"numoutlets" : 5,
-					"outlettype" : [ "signal", "", "", "int", "bang" ],
+					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 198.0, 173.5, 444.5, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 155.0, 157.0, 394.25, 22.0 ],
@@ -5447,27 +5480,6 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "autorecord-buffer2.maxpat",
-				"bootpath" : "~/Documents/nyu - spring 2018/interactive installation /internet-sensors-master/google-speech",
-				"patcherrelativepath" : "./internet-sensors-master/google-speech",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "auto-record-switch.maxpat",
-				"bootpath" : "~/Documents/nyu - spring 2018/interactive installation /internet-sensors-master/google-speech",
-				"patcherrelativepath" : "./internet-sensors-master/google-speech",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "JSON-google-speech.js",
-				"bootpath" : "~/Documents/nyu - spring 2018/interactive installation /internet-sensors-master/google-speech",
-				"patcherrelativepath" : "./internet-sensors-master/google-speech",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "New Recording 4.m4a",
 				"bootpath" : "~/Documents/nyu - spring 2018/interactive installation ",
 				"patcherrelativepath" : ".",
